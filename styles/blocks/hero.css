@@ -1,0 +1,120 @@
+/* ======== Header ======== */
+
+.logo {
+  width: 213px;
+  @media (min-width: 800px) {
+    width: 245px;
+  }
+}
+
+/* ======== Hero ======== */
+.hero {
+  background-color: #e9ded4;
+  background-image: url("../../img/paper.png"), url("../../img/citychess.png");
+  background-repeat: repeat, no-repeat;
+  /* затемнение основы color burn */
+  background-blend-mode: color-burn, normal;
+  /* убрать промежутки */
+  background-size: contain, cover;
+  background-position: 77% 26px;
+  padding-bottom: 291px;
+
+  position: relative;
+
+  @media (min-width: 800px) {
+    background-position: 51% 84%;
+    padding-bottom: 127px;
+    background-size: contain, 105%;
+  }
+
+  @media (min-width: 1190px) {
+    background-image: url("../../img/paper-lg.png"),
+      url("../../img/citychess-lg.png");
+    background-position: 0 0, 50% 67%;
+    padding-bottom: 127px;
+    background-size: contain, 140%;
+  }
+  @media (min-width: 1600px) {
+    background-position: 0 0, 200% 70%;
+    padding-bottom: 127px;
+    background-size: contain, 95%;
+  }
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/chess-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: -1%;
+  left: 39%;
+  width: 100px;
+  height: 120px;
+}
+@media (min-width: 1000px) {
+  .hero::after {
+    /* Mask group */
+    width: 195px;
+    height: 267px;
+    left: 61%;
+    top: 483px;
+  }
+}
+
+@media (min-width: 1190px) {
+  .hero::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/chess-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 82.61px;
+    height: 122.22px;
+    left: 91%;
+    top: 558.2px;
+  }
+}
+
+.hero__header {
+  padding: 17px 0px;
+  @media (min-width: 800px) {
+    padding: 26px 0px;
+  }
+}
+.hero__content {
+  margin-top: 25px;
+  max-width: 542px;
+  @media (min-width: 800px) {
+    margin-top: 34px;
+  }
+}
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+}
+
+.hero__title-2 {
+  align-self: center;
+}
+
+.hero__title-3 {
+  align-self: end;
+}
+
+.hero__des {
+  margin-bottom: 32px;
+  @media (min-width: 800px) {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+.hero__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
+}

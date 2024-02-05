@@ -1,0 +1,210 @@
+.stages {
+  padding: 63px 0;
+  @media (min-width: 800px) {
+    padding: 127px 0;
+  }
+}
+
+.stages__title {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @media (min-width: 800px) {
+    flex-direction: row;
+    max-width: 800px;
+  }
+}
+
+.stages__subtitle {
+  margin-top: 12px;
+  @media (min-width: 800px) {
+    margin-top: 0;
+  }
+}
+/* =========slider=============== */
+
+.stages__slider-wrapper {
+  margin-top: 148px;
+  position: relative;
+  @media (min-width: 800px) {
+    margin-top: 34px;
+  }
+}
+.stages__slider {
+  overflow: hidden;
+  @media (min-width: 800px) {
+    overflow: visible;
+  }
+}
+.stages__slider-container {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  transition: all 1s;
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 112px 112px 136px;
+    gap: 20px;
+  }
+}
+.stages__slider-item-wrapper--double {
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1/3;
+    gap: 20px;
+  }
+}
+.stages__slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -139px;
+  right: -12px;
+  display: block;
+  width: 346px;
+  height: 187px;
+  background-image: url("../../img/stages-image.png");
+  background-size: cover;
+  z-index: 1;
+}
+@media (min-width: 800px) {
+  .stages__slider-wrapper::after {
+    top: 174px;
+    right: -12px;
+    width: 346px;
+  }
+}
+
+.stages__slider-item-wrapper {
+  display: flex;
+  height: 300px;
+  min-width: 335px !important;
+  margin: 0 auto;
+  padding: 62px 20px 0 20px;
+  background-color: rgb(217, 217, 217);
+  background-image: url("../../img/cooper-union-stamp-paper.png"),
+    url("../../img/paper.png");
+
+  background-blend-mode: normal, color-burn;
+  background-position: 0 0, -50% 0;
+
+  flex-direction: column;
+  gap: 28px;
+  @media (min-width: 800px) {
+    display: grid;
+
+    height: auto;
+    padding: 20px;
+  }
+}
+
+.stages__slider-item-wrapper:nth-child(2) {
+  @media (min-width: 800px) {
+    grid-row: span 2;
+  }
+}
+.stages__slider-item-wrapper:nth-child(5) {
+  @media (min-width: 800px) {
+    grid-column: span 2;
+    padding-right: 285px;
+  }
+}
+.stages__slider-item {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  padding-left: 52px;
+
+  position: relative;
+}
+
+.stages__slider-item::after {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0px;
+  text-align: left;
+  padding: 5px 12px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+
+.stages__slider-item--1::after {
+  content: "1";
+}
+.stages__slider-item--2::after {
+  content: "2";
+}
+.stages__slider-item--3::after {
+  content: "3";
+}
+.stages__slider-item--4::after {
+  content: "4";
+}
+.stages__slider-item--5::after {
+  content: "5";
+}
+.stages__slider-item--6::after {
+  content: "6";
+}
+.stages__slider-item--7::after {
+  content: "7";
+}
+
+/* =======pagination=========== */
+
+.stages__slider-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+  @media (min-width: 800px) {
+    display: none;
+  }
+}
+
+.slider-pagination_button {
+  width: 36px;
+  height: 36px;
+  background: rgb(49, 49, 49);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.slider-pagination_button--disabled {
+  background-color: rgba(49, 49, 49, 0.2);
+}
+
+.slider-pagination_button--prev {
+  background-image: url("../../img/arrow.png");
+  transform: rotate(-180deg);
+}
+
+.slider-pagination_button--next {
+  background-image: url("../../img/arrow.png");
+}
+.slider-pagination_list {
+  display: flex;
+  gap: 6px;
+}
+.slider-pagination_item {
+  width: 10px;
+  height: 10px;
+  background: rgb(217, 217, 217);
+  border-radius: 50%;
+}
+.slider-pagination_item--active {
+  background: rgb(49, 49, 49);
+}
+
+/* /test */
